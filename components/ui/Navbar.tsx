@@ -17,26 +17,25 @@ export const Navbar = () => {
             backgroundColor: theme?.colors.gray100.value
         }}>
 
-            <Image 
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" 
-                alt="icono de la App"
-                width={70}
-                height={70}
-            />
-
             <NextLink href="/" passHref>
-                <Link>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Image 
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" 
+                        alt="icono de la App"
+                        width={70}
+                        height={70}
+                    />
                     <Text color='white' h2>P</Text>
                     <Text color='white' h3>ókemon</Text>
-                </Link>
+                    <Spacer css={{ flex: 1 }} />
+                </div>
             </NextLink>
 
-            <Spacer css={{ flex: 1 }} />
-
             <NextLink href='/favorites' passHref>
-                <Link css={{ marginRight: '10px' }}>
+                {/*<Link css={{ marginRight: '10px' }}>*/}
+                <div>
                     <Text color='white'>Favoritos</Text>
-                </Link>
+                </div>
             </NextLink>
 
         </div>
